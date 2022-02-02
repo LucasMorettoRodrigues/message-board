@@ -1,0 +1,23 @@
+{
+  "name": "2-messageboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasMorettoRodrigues/message-board.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucasMorettoRodrigues/message-board/issues"
+  },
+  "homepage": "https://github.com/LucasMorettoRodrigues/message-board#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  }
+}
