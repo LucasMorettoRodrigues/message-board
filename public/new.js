@@ -1,3 +1,9 @@
+const cancelBtn = document.querySelector('#cancelBtn')
+cancelBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+    window.location.href = "http://localhost:3000/"
+})
+
 // submit form
 
 const createMessageBtn = document.querySelector('#createMessageBtn')
@@ -15,7 +21,7 @@ createMessageBtn.addEventListener('click', async(e) => {
     if (name === '' || title === '' || message === '') {
         return alert('Please, fill all the camps')
     }
-    
+
     console.log('hi')
     const newMessage = { name: name, title: title, message: message, date: new Date() }
 
