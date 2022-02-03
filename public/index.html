@@ -8,39 +8,11 @@
     <title>Message Board</title>
 </head>
 <body>
-    <div id="form" class="hidden">
-        <form method="POST">
-            <input type="text" name="author" id="author" placeholder="Author">
-            <input type="text" name="title" id="title" placeholder="Message Title">
-            <textarea name="message" id="message" cols="30" rows="5" placeholder="Message"></textarea>
-            <button id="createMessageBtn" type="submit">Create Message</button>
-        </form>
-    </div>
     <header><h1>Message Board</h1></header>
     <main>
         <ul id="message-container">
-            <li>
-                <div class="message-header">
-                    <h2>Message Title</h2>
-                    <h4>Date</h4>
-                </div>
-                <div class="message-body">
-                    <h3>Author</h3>
-                    <p>Message Message Message Message Message Message Message Message Message Message Message Message Message Message Message Message Message Message Message </p>
-                </div>
-            </li>
-            <li>
-                <div class="message-header">
-                    <h2>Message Title</h2>
-                    <h4>Date</h4>
-                </div>
-                <div class="message-body">
-                    <h3>Author</h3>
-                    <p>Message Message Message Message Message Message Message Message Message Message Message Message Message Message Message Message Message Message Message </p>
-                </div>
-            </li>
         </ul>
-        <button id="newMessageBtn">New Message</button>
+        <a id="newMessageBtn" href="new.html">New Message</a>
     </main>
     <footer>Footer</footer>
     <script src="index.js"></script>

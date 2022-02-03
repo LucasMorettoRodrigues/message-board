@@ -1,4 +1,4 @@
-const createMessage = (author, title, message) => {
+const createMessage = (author, title, message, date) => {
     const ul = document.querySelector('#message-container')
 
     const messageBox = document.createElement('li')
@@ -8,7 +8,7 @@ const createMessage = (author, title, message) => {
     const titleElement = document.createElement('h2')
     titleElement.textContent = title
     const dateElement = document.createElement('h4')
-    dateElement.textContent = Date.now()
+    dateElement.textContent = date
 
     messageHeader.append(titleElement)
     messageHeader.append(dateElement)
@@ -29,21 +29,51 @@ const createMessage = (author, title, message) => {
     ul.append(messageBox)
 }
 
-const handleNewMessage = () => {
-    const form = document.querySelector('#form')
-    form.classList.remove('hidden')
+const fetchMessages = async () => {
+    try {
+        const response = await fetch('/messages', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'applications/json'
+            }})
+        const data = await response.json()
+        data.data.map((message) => {
+            createMessage(message.author, message.title, message.message, message.date)
+        })
+    } catch (error) {
+        console.log(error)
+    }
 }
 
-const handleCreateMessage = (e) => {
-    e.preventDefault()
-    const form = document.querySelector('#form')
-    form.classList.add('hidden')
-    createMessage('eu', 'titulo de teste', 'mensagem de teste')
-}
+fetchMessages()
 
-const newMessageBtn = document.querySelector('#newMessageBtn')
+// submit form
+
 const createMessageBtn = document.querySelector('#createMessageBtn')
+createMessageBtn.addEventListener('click', async(e) => {
+    e.preventDefault()
 
-newMessageBtn.addEventListener('click', handleNewMessage)
-createMessageBtn.addEventListener('click', handleCreateMessage)
+    const authorInput = document.querySelector('#author')
+    const titleInput = document.querySelector('#title')
+    const messageInput = document.querySelector('#message')
+
+    const author = authorInput.value
+    const title = titleInput.value
+    const message = messageInput.value
+    console.log('hi')
+    const newMessage = { author: author, title: title, message: message, date: new Date() }
+
+    try {
+        await fetch('http://localhost:3000/new', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ data: newMessage }) 
+        })
+        window.location.href = "http://localhost:3000/"
+    } catch (error) {
+        console.log(error)
+    }
+})
 

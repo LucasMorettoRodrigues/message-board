@@ -28,8 +28,9 @@ main {
     padding: 2em;
 }
 
-main button,
-#form form button {
+main a,
+form button {
+    text-decoration: none;
     background-color: rgb(98, 98, 255);
     color: white;
     font-weight: bold;
@@ -39,13 +40,13 @@ main button,
     cursor: pointer;
 }
 
-main button:hover,
-#form form button:hover {
+main a:hover,
+form button:hover {
     background-color: rgb(48, 48, 128);
 }
 
-main button:active,
-#form form button:active {
+main a:active,
+form button:active {
     background-color: rgb(98, 98, 255);;
 }
 
@@ -103,7 +104,7 @@ footer {
     justify-content: center;
 }
 
-#form form {
+form {
     background-color: white;
     padding: 2em;
     display: flex;
@@ -111,15 +112,11 @@ footer {
     border-radius: 10px;
 }
 
-#form form input,
-#form form textarea {
+form input,
+form textarea {
     border: 1px solid #999;
     border-radius: 10px;
     padding: 1em;
     margin: 1em;
-}
-
-.hidden {
-    visibility: hidden;
 }
 

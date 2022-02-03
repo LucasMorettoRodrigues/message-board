@@ -1,15 +1,12 @@
 const express = require('express')
 const app = express()
+const router = require('./routes/index')
 
 app.use(express.static('./public'))
+
+app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
-
-app.route('/').get((req, res) => {
-    res.status(200)
-})
-
-app.route('/new-message').post((req, res) => {
-})
+app.use('/', router)
 
 const port = 3000
 
