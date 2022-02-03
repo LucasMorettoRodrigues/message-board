@@ -67,6 +67,7 @@ main form button {
 main ul {
     list-style: none;
     max-width: 800px;
+    margin-bottom: 1em;
 }
 
 main form,
@@ -75,6 +76,7 @@ main li {
     color: rgb(65, 65, 65);
     margin: 2em;
     background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 main form div {

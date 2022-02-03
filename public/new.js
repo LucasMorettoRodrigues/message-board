@@ -22,8 +22,11 @@ createMessageBtn.addEventListener('click', async(e) => {
         return alert('Please, fill all the camps')
     }
 
-    console.log('hi')
-    const newMessage = { name: name, title: title, message: message, date: new Date() }
+    date = new Date()
+    const dateFormated = ((date.getDate() )) + "/" + ((date.getMonth() + 1)) + "/" + date.getFullYear(); 
+
+
+    const newMessage = { name: name, title: title, message: message, date: dateFormated }
 
     try {
         await fetch('http://localhost:3000/new', {
