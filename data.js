@@ -1,12 +1,12 @@
 const messages = [
     {   
-        author: 'Jonny', 
+        name: 'Jonny', 
         title:'Welcome', 
         message:'Hey, hello, what are you doing?',
         date: 'date'
     },
     {
-        author: 'Peter',
+        name: 'Peter',
         title:'Nice', 
         message:'Hi, I am testing this awesome site?',
         date: 'date'
