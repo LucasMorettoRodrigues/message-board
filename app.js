@@ -1,15 +1,16 @@
 const express = require('express')
+const notFound = require('./middleware/not-found')
 const app = express()
 const router = require('./routes/index')
 
 app.use(express.static('./public'))
 
+
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
+
+
 app.use('/', router)
+app.use(notFound)
 
-const port = 3000
-
-app.listen(port, () => {
-    console.log(`Server is listening on port ${port}`)
-})
+module.exports = app
