@@ -1,8 +1,11 @@
 const express = require('express')
-const notFound = require('./middleware/not-found')
 const app = express()
 const router = require('./routes/index')
+const cors = require('cors')
 
+const notFound = require('./middleware/not-found')
+
+app.use(cors())
 app.use(express.static('./public'))
 
 

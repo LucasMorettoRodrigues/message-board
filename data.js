@@ -6,7 +6,7 @@ const messages = [
         date: '2/2/2022'
     },
     {
-        name: 'Peter',
+        name: 'Petter',
         title:'Nice Message Board', 
         message:'Mauris vitae leo condimentum, blandit enim ut, varius nisl. Vivamus dictum sit amet eros eget fringilla. Nullam nunc tortor, egestas at dapibus vitae, lobortis quis lectus.',
         date: '3/2/2022'
