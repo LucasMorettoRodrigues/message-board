@@ -3,11 +3,10 @@ const app = express()
 const router = require('./routes/index')
 const cors = require('cors')
 
-const notFound = require('./middleware/not-found')
-
 app.use(cors())
-app.use(express.static('./public'))
 
+app.use(express.static('./public'))
+const notFound = require('./middleware/not-found')
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())

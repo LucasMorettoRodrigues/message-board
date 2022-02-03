@@ -1,7 +1,7 @@
 const cancelBtn = document.querySelector('#cancelBtn')
 cancelBtn.addEventListener('click', (e) => {
     e.preventDefault()
-    window.location.href = "https://dry-sierra-93572.herokuapp.com/"
+    window.location.href = "/"
 })
 
 // submit form
@@ -31,13 +31,12 @@ createMessageBtn.addEventListener('click', async(e) => {
     try {
         await fetch('/new', {
             method: 'POST',
-            mode: 'cors',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({ data: newMessage }) 
         })
-        window.location.href = "https://dry-sierra-93572.herokuapp.com/"
+        window.location.href = "/"
     } catch (error) {
         console.log(error)
     }

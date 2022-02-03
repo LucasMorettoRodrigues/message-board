@@ -33,7 +33,6 @@ const fetchMessages = async () => {
     try {
         const response = await fetch('/messages', {
             method: 'GET',
-            mode: 'cors',
             headers: {
                 'Content-Type': 'applications/json'
             }})
