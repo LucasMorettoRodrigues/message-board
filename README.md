@@ -1,8 +1,8 @@
 # Message Board
 
-This message web app is part of the Odin Project.
-It was built to practice nodeJS, express and huroku deployment.
-You can see messages by other users, create a new message and post it. All messages are displayed on home screen.
+This is a message web app.
+It was built to practice nodeJS and express.
+You can see messages by other user and, create a new message and post it. All messages are displayed on home screen.
 
 ## Live
 
